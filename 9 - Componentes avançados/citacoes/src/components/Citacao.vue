@@ -1,13 +1,25 @@
 <template>
     <div class="citacao">
-      <slot name="autor"> </slot>
-      <slot name="texto"> </slot>
       <slot name="fonte"> </slot>
+      <slot></slot>
+      <div class="autor"> <slot  name="autor"> </slot></div>
     </div>
 </template>
 
 <script>
 export default {
+  created() {
+    console.log('created')
+  }, 
+  destroyed() {
+    console.log('destroyed')
+  },
+  activated() {
+    console.log('activated')
+  }, 
+  deactivated() {
+    console.log('deactivated')
+  },
 }
 </script>
 
@@ -19,3 +31,4 @@ export default {
         max-width: 450px;
     }
 </style>
+1
